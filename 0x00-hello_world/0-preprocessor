@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="input.c" OUTPUT="c" gcc -E "$CFILE" -o "$OUTPUT"
+gcc -E "$CFILE" -o "$OUTPUT"
