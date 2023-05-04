@@ -11,15 +11,19 @@ char *cap_string(char *str)
 	int i = 0, j;
 	char a[] = " \t\n,;.!?\"(){}";
 
-	while (str[i])
+	while (str[i] != '\0')
 	{
-		while (!(str[i] >= 'a' && str[i] <= 'z'))
-			i++;
-		for (j = 0; j <= 12; j++)
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			if (str[i - 1] == a[j])
-			{
+			if (i == 0)
 				str[i] -= 32;
+			else
+			{
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == str[i - 1])
+						str[i] -= 32;
+				}
 			}
 		}
 		i++;
