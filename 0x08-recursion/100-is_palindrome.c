@@ -29,7 +29,7 @@ int checkStr(char *a, int b, int c)
 	{
 		if (b == c || b == c + 1)
 			return (1);
-                return (0 + checkStr(a, b + 1, c - 1));
+		return (0 + checkStr(a, b + 1, c - 1));
 	}
 	return (0);
 }
