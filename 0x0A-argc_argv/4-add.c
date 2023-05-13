@@ -15,13 +15,13 @@ int checkNumbers(char *a)
 	str_len = strlen(a);
 	for (i = 0; i < str_len; i++)
 	{
-		if (*a < '0' || *a > '9')
+		if (a[i] < '0' || a[i] > '9')
 		{
 			return (-1);
 		}
 		else
 		{
-			number = number * 10 + (*a - '0');
+			number = number * 10 + (a[i] - '0');
 		}
 	}
 	return (number);
