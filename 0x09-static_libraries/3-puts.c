@@ -2,13 +2,8 @@
 
 /**
  * _puts - prints a string to stdout
- * @str: pointer.
+ * @s: pointer.
  */
-void _puts(char *str)
+void _puts(char *s)
 {
-	while (*str != '\0')
-	{
-		_putchar(*str++);
-	}
-	_putchar('\n');
 }
