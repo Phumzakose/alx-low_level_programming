@@ -21,8 +21,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 	for (c = 0; s2[c] != '\0'; c++)
 		;
-	if (n > c)
-		n = c;
+	if (n >= c)
+		d = a + c;
 	else
 		d = a + n;
 
