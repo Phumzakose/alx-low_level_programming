@@ -26,16 +26,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		;
 	s->name = malloc(i + 1);
 	s->owner = malloc(j + 1);
-	if (s->name == NULL)
+
+	if (s->name == NULL || s->owner == NULL)
 	{
-		free(s->name);
-		free(s);
-		return (NULL);
-	}
-	if (s->owner == NULL)
-	{
-		free(s->owner);
-		free(s);
+		free(s->name), free(s->owner), free(s);
 		return (NULL);
 	}
 	while (k < i)
