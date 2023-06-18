@@ -5,7 +5,7 @@
  * flip to get from one number or another.
  * @n: input1
  * @m: input2
- * Returns: number of flip
+ * Return: number of flip
  */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
