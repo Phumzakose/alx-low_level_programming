@@ -10,20 +10,17 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int flips = 0, bit1, bit2;
+	int i, count = 0;
+	unsigned long int current;
+	unsigned long int flip = n ^ m;
 
-
-	while (!(n == 0 && m == 0))
+	for (i = 63; i >= 0; i--)
 	{
-		bit1 = n & 1;
-		bit2 = m & 1;
-
-		n = n >> 1;
-		m = m >> 1;
-		if (bit1 != bit2)
-		{
-			flips += 1;
-		}
+		current = flip >> i;
+		if (current & 1)
+			count++;
 	}
-	return (flips);
+
+	return (count);
+
 }
